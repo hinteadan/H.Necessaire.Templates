@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Hintea Dan Alexandru",
+  "classifications": [ "H.Necessaire", "CLI", "Console" ],
+  "identity": "H.Necessaire.Template.CLI",
+  "name": "H's Necessaire Templates: CLI Project",
+  "shortName": "h.necessaire.cli",
+  "sourceName":"H.Necessaire.Template.CLI",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }
+}
