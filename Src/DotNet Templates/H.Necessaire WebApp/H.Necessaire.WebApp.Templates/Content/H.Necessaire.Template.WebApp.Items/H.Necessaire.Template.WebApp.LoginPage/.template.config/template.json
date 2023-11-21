@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Hintea Dan Alexandru",
+  "classifications": [ "H.Necessaire", "WebApp", "Web", "BridgeDotNet", "LoginPage" ],
+  "identity": "H.Necessaire.Template.WebApp.LoginPage",
+  "name": "LoginPage (H's Necessaire WebApp Templates)",
+  "shortName": "h.necessaire.webapp.loginpage",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "symbols": {
+    "ClassName": {
+      "type": "parameter",
+      "description": "The name of the code file and class.",
+      "datatype": "text",
+      "replaces": "HNecessaireWebAppLoginPage",
+      "fileRename": "HNecessaireWebAppLoginPage",
+      "defaultValue": "HNecessaireWebAppLoginPage"
+    },
+    "RootNamespace": {
+      "type": "parameter",
+      "description": "The namespace of the code file and class.",
+      "datatype": "text",
+      "replaces": "HNecessaireWebAppRootNamespace",
+      "defaultValue": "HNecessaireWebApp"
+    },
+    "RelativeNamespace": {
+      "type": "parameter",
+      "description": "The relative namespace of the code file and class.",
+      "datatype": "text",
+      "replaces": "HNecessaireWebAppRelativeNamespace",
+      "defaultValue": "Pages"
+    }
+  }
+}
