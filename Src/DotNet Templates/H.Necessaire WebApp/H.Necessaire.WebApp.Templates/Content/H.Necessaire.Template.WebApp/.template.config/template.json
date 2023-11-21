@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Hintea Dan Alexandru",
+  "classifications": [ "H.Necessaire", "WebApp", "Web", "BridgeDotNet" ],
+  "identity": "H.Necessaire.Template.WebApp",
+  "groupIdentity": "H.Necessaire.Template.WebApp",
+  "name": "H's Necessaire Templates: WebApp Project",
+  "shortName": "h.necessaire.webapp",
+  "sourceName": "H.Necessaire.Template.WebApp",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }
+}

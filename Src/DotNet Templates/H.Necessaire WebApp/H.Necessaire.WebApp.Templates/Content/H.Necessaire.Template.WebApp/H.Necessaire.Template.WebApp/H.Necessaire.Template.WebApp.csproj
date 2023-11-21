@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>H.Necessaire.Template.WebApp</RootNamespace>
+    <AssemblyName>H.Necessaire.Template.WebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="AppConfig.cs" />
+    <Compile Include="AppNavigationRegistry.cs" />
+    <Compile Include="AppWireup.cs" />
+    <Compile Include="BLL\DependencyGroup.cs" />
+    <Compile Include="BLL\Engines\DependencyGroup.cs" />
+    <Compile Include="BLL\Managers\DependencyGroup.cs" />
+    <Compile Include="BLL\Resources\DependencyGroup.cs" />
+    <Compile Include="AppBrandingStyle.cs" />
+    <Compile Include="Components\Abstract\AppComponentBase.cs" />
+    <Compile Include="Components\Chrome\AppStandardPageChrome.cs" />
+    <Compile Include="Components\Contract\ImAnAppComponent.cs" />
+    <Compile Include="Daemons\Abstract\AppWebWorkerDaemonBase.cs" />
+    <Compile Include="Daemons\DependencyGroup.cs" />
+    <Compile Include="Daemons\SyncDaemon.cs" />
+    <Compile Include="Pages\Abstract\AppPageBase.cs" />
+    <Compile Include="Pages\Abstract\AppSecuredPageBase.cs" />
+    <Compile Include="Pages\Contract\ImAPage.cs" />
+	<Compile Include="Pages\AppWelcomePage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WellKnownAppColorPalette.cs" />
+    <Compile Include="WellKnownAppTypography.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="H.Necessaire.BridgeDotNet.Runtime.ReactApp">
+      <Version>2.31.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AppIcon\site.webmanifest" />
+    <None Include="bridge.json" />
+    <None Include="Refs\**\*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppIcon\*" />
+    <Content Include="Assets\*" />
+    <Content Include="Refs\**\*" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

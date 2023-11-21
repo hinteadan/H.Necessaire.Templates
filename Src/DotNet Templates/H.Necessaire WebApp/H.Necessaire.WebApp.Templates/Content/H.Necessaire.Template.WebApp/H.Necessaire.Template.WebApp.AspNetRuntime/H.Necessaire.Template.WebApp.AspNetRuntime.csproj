@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Content\**" />
+		<Content Remove="Content\**" />
+		<EmbeddedResource Remove="Content\**" />
+		<None Remove="Content\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="H.Necessaire.Runtime.Integration.NetCore" Version="2.31.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\H.Necessaire.Template.WebApp.Runtime\H.Necessaire.Template.WebApp.Runtime.csproj" />
+	</ItemGroup>
+
+	<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+		<Exec Command="IF EXIST &quot;$(SolutionDir)H.Necessaire.Template.WebApp\H.Necessaire.Template.WebApp.AspNetRuntime\version.txt&quot; del /f &quot;$(SolutionDir)H.Necessaire.Template.WebApp\H.Necessaire.Template.WebApp.AspNetRuntime\version.txt&quot;" />
+		<Exec Command="&quot;$(SolutionDir)H.Necessaire.Template.WebApp\H.Necessaire.Template.WebApp.CLI\bin\$(Configuration)\net8.0\H.Necessaire.Template.WebApp.CLI.exe&quot; version &gt; &quot;$(SolutionDir)H.Necessaire.Template.WebApp\H.Necessaire.Template.WebApp.AspNetRuntime\version.txt&quot;" />
+	</Target>
+
+	<Target Name="PostBuild" BeforeTargets="PostBuildEvent">
+		<Exec Command="IF NOT EXIST &quot;IsBuildPipeline.txt&quot; &quot;$(SolutionDir)H.Necessaire.Template.WebApp\H.Necessaire.Template.WebApp.CLI\bin\$(Configuration)\net8.0\H.Necessaire.Template.WebApp.CLI.exe&quot; bridgedotnet copy &quot;Src=$(SolutionDir)H.Necessaire.Template.WebApp\H.Necessaire.Template.WebApp&quot; &quot;Dst=$(SolutionDir)H.Necessaire.Template.WebApp\H.Necessaire.Template.WebApp.AspNetRuntime&quot;" />
+	</Target>
+
+</Project>

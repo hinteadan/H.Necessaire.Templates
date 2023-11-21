@@ -1,0 +1,6 @@
+﻿{
+  "$schema": "http://json.schemastore.org/ide.host",
+  "appliesTo": null,
+  "defaultItemExtension": "cs",
+  "itemHierarchyPaths": [ "H.Necessaire" ]
+}

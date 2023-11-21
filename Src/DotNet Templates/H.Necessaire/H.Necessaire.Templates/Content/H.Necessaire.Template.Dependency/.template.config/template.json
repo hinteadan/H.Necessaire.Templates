@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Hintea Dan Alexandru",
+  "classifications": [ "H.Necessaire", "IoC", "Dependency" ],
+  "identity": "H.Necessaire.Template.Dependency",
+  "name": "Dependency (H's Necessaire Templates)",
+  "shortName": "h.necessaire.dependency",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "symbols": {
+    "ClassName": {
+      "type": "parameter",
+      "description": "The name of the code file and class.",
+      "datatype": "text",
+      "replaces": "HNecessaireDependency",
+      "fileRename": "HNecessaireDependency",
+      "defaultValue": "HNecessaireDependency"
+    },
+    "RootNamespace": {
+      "type": "parameter",
+      "description": "The namespace of the code file and class.",
+      "datatype": "text",
+      "replaces": "HNecessaireRootNamespace",
+      "defaultValue": "HNecessaire"
+    },
+    "RelativeNamespace": {
+      "type": "parameter",
+      "description": "The relative namespace of the code file and class.",
+      "datatype": "text",
+      "replaces": "HNecessaireRelativeNamespace",
+      "defaultValue": "Deps"
+    }
+  }
+}
