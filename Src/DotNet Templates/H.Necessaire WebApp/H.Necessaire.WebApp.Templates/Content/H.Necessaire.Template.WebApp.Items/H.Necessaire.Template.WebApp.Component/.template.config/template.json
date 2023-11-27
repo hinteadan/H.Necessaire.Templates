@@ -14,9 +14,9 @@
       "type": "parameter",
       "description": "The name of the code file and class.",
       "datatype": "text",
-      "replaces": "HNecessaireWebAppPage",
-      "fileRename": "HNecessaireWebAppPage",
-      "defaultValue": "HNecessaireWebAppPage"
+      "replaces": "HNecessaireWebAppComponent",
+      "fileRename": "HNecessaireWebAppComponent",
+      "defaultValue": "HNecessaireWebAppComponent"
     },
     "RootNamespace": {
       "type": "parameter",
