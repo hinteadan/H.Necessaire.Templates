@@ -6,7 +6,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="H.Necessaire.CLI" Version="2.32.3" />
+		<PackageReference Include="H.Necessaire.CLI" Version="2.32.4" />
 	</ItemGroup>
 
 	<ItemGroup>
