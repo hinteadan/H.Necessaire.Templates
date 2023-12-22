@@ -13,7 +13,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="H.Necessaire.Runtime.Integration.NetCore" Version="2.32.8" />
+		<PackageReference Include="H.Necessaire.Runtime.Integration.NetCore" Version="2.33.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.0" />
 	</ItemGroup>
 
