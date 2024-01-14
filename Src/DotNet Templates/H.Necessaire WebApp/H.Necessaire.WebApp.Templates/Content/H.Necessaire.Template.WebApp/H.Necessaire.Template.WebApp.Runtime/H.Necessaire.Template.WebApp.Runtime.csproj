@@ -5,8 +5,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="H.Necessaire.Runtime" Version="2.34.7" />
-		<PackageReference Include="H.Necessaire.Serialization" Version="2.34.7" />
+		<PackageReference Include="H.Necessaire.Runtime" Version="2.34.8" />
+		<PackageReference Include="H.Necessaire.Serialization" Version="2.34.8" />
 	</ItemGroup>
 
 </Project>
