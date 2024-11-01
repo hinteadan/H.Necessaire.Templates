@@ -60,7 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="H.Necessaire.BridgeDotNet.Runtime.ReactApp">
-      <Version>2.37.4</Version>
+      <Version>2.37.6</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
